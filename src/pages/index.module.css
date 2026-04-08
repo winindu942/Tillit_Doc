@@ -1,0 +1,102 @@
+.hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 55%, #0f3460 100%);
+  color: white;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.heroInner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(92, 107, 192, 0.25);
+  border: 1px solid rgba(165, 180, 252, 0.4);
+  color: #a5b4fc;
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 16px;
+  color: white;
+}
+
+.desc {
+  font-size: 17px;
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin: 0 0 32px;
+}
+
+.btn {
+  background: #5c6bc0;
+  color: white !important;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none !important;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #4a58a8;
+}
+
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 56px 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--ifm-card-background-color);
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 12px;
+  padding: 28px;
+  text-decoration: none !important;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 20px rgba(92, 107, 192, 0.12);
+  border-color: #5c6bc0;
+}
+
+.cardIcon {
+  font-size: 30px;
+}
+
+.cardTitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ifm-font-color-base);
+}
+
+.cardDesc {
+  font-size: 14px;
+  color: var(--ifm-color-content-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .title { font-size: 28px; }
+}
