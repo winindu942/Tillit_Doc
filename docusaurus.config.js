@@ -7,11 +7,11 @@ const config = {
 
   future: { v4: true },
 
-  url: 'https://shopify.tillit.world',
-  baseUrl: '/docs/',
+  url: 'https://winindu942.github.io',
+  baseUrl: '/Tillit_Doc/',
 
-  organizationName: 'tillit',
-  projectName: 'tillit-docs',
+  organizationName: 'winindu942',
+  projectName: 'Tillit_Doc',
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
