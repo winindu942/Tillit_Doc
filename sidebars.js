@@ -3,6 +3,7 @@ const sidebars = {
     'intro',
     'dashboard',
     'billing',
+    'widgets',
   ],
 };
 
