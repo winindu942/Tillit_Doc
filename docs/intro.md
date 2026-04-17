@@ -13,6 +13,7 @@ This documentation covers the following pages of the app:
 
 - [Supply Chain Dashboard](/dashboard) — Your main overview screen inside the app
 - [Billing & Subscription](/billing) — Your current plan, usage, and billing history
+- [Widgets - Badge Management](./widgets.mdx) - Manage you products/batches verfification badges
 
 :::info
 This is a sample documentation site. Content is based on the actual app screens.

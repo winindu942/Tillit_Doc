@@ -31,6 +31,11 @@ export default function Home() {
             <div className={styles.cardTitle}>Billing & Subscription</div>
             <div className={styles.cardDesc}>View your current plan, track usage, compare plans, and see billing history.</div>
           </Link>
+          <Link className={styles.card} to="/widgets">
+            <div className={styles.cardIcon}>🛠️</div>
+            <div className={styles.cardTitle}>Widgets - Badge Management</div>
+            <div className={styles.cardDesc}>Manage your product/batch verfification badges and apply for verfification</div>
+          </Link>
         </div>
       </main>
     </Layout>

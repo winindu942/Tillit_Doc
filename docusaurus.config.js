@@ -3,7 +3,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'TILLIT AI Docs',
   tagline: 'Supply chain traceability for Shopify merchants',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/TillitLogo.png',
 
   future: { v4: true },
 
@@ -36,7 +36,7 @@ const config = {
     colorMode: { respectPrefersColorScheme: true },
     navbar: {
       title: 'TILLIT AI',
-      logo: { alt: 'TILLIT AI Logo', src: 'img/logo.svg' },
+      logo: { alt: 'TILLIT AI Logo', src: 'img/TillitLogo.png' },
       items: [
         {
           type: 'docSidebar',
