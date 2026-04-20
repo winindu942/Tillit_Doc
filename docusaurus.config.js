@@ -18,6 +18,19 @@ const config = {
 
   i18n: { defaultLocale: 'en', locales: ['en'] },
 
+  plugins: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        language: ['en'],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+        docsRouteBasePath: '/',
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
@@ -33,7 +46,7 @@ const config = {
   ],
 
   themeConfig: ({
-    colorMode: { respectPrefersColorScheme: true },
+    colorMode: { defaultMode: 'dark', disableSwitch: true, respectPrefersColorScheme: false },
     navbar: {
       title: 'TILLIT AI',
       logo: { alt: 'TILLIT AI Logo', src: 'img/TillitLogo.png' },
@@ -46,8 +59,14 @@ const config = {
         },
         {
           href: 'https://tillit.world',
-          label: 'tillit.world',
+          label: 'tillit.world ↗',
           position: 'right',
+        },
+        {
+          to: '/intro',
+          label: 'Get Started',
+          position: 'right',
+          className: 'navbar-cta-btn',
         },
       ],
     },
@@ -57,15 +76,18 @@ const config = {
         {
           title: 'Documentation',
           items: [
-            { label: 'Introduction', to: '/intro' },
-            { label: 'Supply Chain Dashboard', to: '/dashboard' },
-            { label: 'Billing & Subscription', to: '/billing' },
+            { label: 'Introduction',    to: '/intro' },
+            { label: 'Advanced',        to: '/advanced' },
+            { label: 'Trust Center',    to: '/trust-center' },
+            { label: 'Widgets',         to: '/widgets' },
+            { label: 'Settings',        to: '/settings' },
+            { label: 'Billing',         to: '/billing' },
           ],
         },
         {
           title: 'Company',
           items: [
-            { label: 'tillit.world', href: 'https://tillit.world' },
+            { label: 'tillit.world',    href: 'https://tillit.world' },
           ],
         },
       ],
@@ -74,6 +96,7 @@ const config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      defaultLanguage: 'bash',
     },
   }),
 };

@@ -1,9 +1,22 @@
 const sidebars = {
   tutorialSidebar: [
-    'intro',
-    'dashboard',
-    'billing',
-    'widgets',
+    {
+      type: 'doc',
+      id: 'intro',
+      label: 'Introduction',
+    },
+    {
+      type: 'category',
+      label: 'App Sections',
+      collapsible: false,
+      items: [
+        'advanced',
+        'trust-center',
+        'widgets',
+        'settings',
+        'billing',
+      ],
+    },
   ],
 };
 
