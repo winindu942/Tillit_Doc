@@ -63,7 +63,7 @@ const config = {
           position: 'right',
         },
         {
-          to: '/intro',
+          to: '/',
           label: 'Get Started',
           position: 'right',
           className: 'navbar-cta-btn',
@@ -76,7 +76,7 @@ const config = {
         {
           title: 'Documentation',
           items: [
-            { label: 'Introduction',    to: '/intro' },
+            { label: 'Introduction',    to: '/' },
             { label: 'Advanced',        to: '/advanced' },
             { label: 'Trust Center',    to: '/trust-center' },
             { label: 'Widgets',         to: '/widgets' },
