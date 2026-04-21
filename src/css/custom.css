@@ -543,10 +543,15 @@ button[class*='copyButton']:hover {
 /* ── 16. CARD SECTIONS ── */
 /* Usage: <div className="card-grid"> <div className="card"> ... </div> </div> */
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--space-2);
   margin: var(--space-2) 0;
+  justify-content: center;
+}
+.card-grid .card {
+  flex: 1 1 220px;
+  max-width: 260px;
 }
 .card {
   background: var(--tillit-card-alt);   /* Layer 3 — sits above content card */
@@ -666,7 +671,29 @@ button[class*='copyButton']:hover {
 /* ── 21. SMOOTH SCROLL ── */
 html { scroll-behavior: smooth; }
 
-/* ── 22. HERO GRADIENT SECTION (for intro page) ── */
+/* ── 22. CARD ICONS (intro page — AWS item 11) ── */
+/* Usage: <div className="card-icon card-icon--green"><SomeIcon className="icon" /></div> */
+.card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-1);
+}
+.card-icon svg,
+.card-icon .icon {
+  width: 22px;
+  height: 22px;
+}
+.card-icon--green  { background: rgba(16, 185, 129, 0.15); color: #10b981; }
+.card-icon--blue   { background: rgba(56, 139, 253, 0.15);  color: #388bfd; }
+.card-icon--purple { background: rgba(139, 92, 246, 0.15);  color: #8b5cf6; }
+.card-icon--amber  { background: rgba(227, 179, 65, 0.15);  color: #e3b341; }
+.card-icon--teal   { background: rgba(20, 184, 166, 0.15);  color: #14b8a6; }
+
+/* ── 23. HERO GRADIENT SECTION (for intro page) ── */
 /* Usage: <div className="hero-section"> ... </div> */
 .hero-section {
   background:
@@ -696,7 +723,7 @@ html { scroll-behavior: smooth; }
   gap: 8px;
   padding: 0.65rem 1.5rem;
   background: var(--tillit-green);
-  color: #fff;
+  color: #fff !important;
   font-weight: 700;
   font-size: 0.95rem;
   border-radius: 8px;
