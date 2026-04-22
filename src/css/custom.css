@@ -167,7 +167,7 @@ h4 { font-size: 0.95rem; font-weight: 600; color: var(--tillit-heading); }
   letter-spacing: -0.015em;
   transition: color 0.2s, background 0.2s, border-color 0.2s !important;
 }
-.navbar__link:hover {
+.navbar__link:hover:not(.navbar-cta-btn) {
   color: #047857 !important;
   background: #ecfdf5 !important;
   border-color: #d1fae5 !important;
@@ -236,7 +236,9 @@ h4 { font-size: 0.95rem; font-weight: 600; color: var(--tillit-heading); }
   box-shadow: 0 1px 4px rgba(4,120,87,0.3), inset 0 1px 0 rgba(255,255,255,0.15) !important;
   transition: filter 0.2s, box-shadow 0.2s, transform 0.15s !important;
 }
-.navbar-cta-btn:hover {
+.navbar-cta-btn:hover,
+.navbar__link.navbar-cta-btn:hover,
+[class*="navbar"].navbar-cta-btn:hover {
   filter: brightness(1.09) !important;
   box-shadow: 0 6px 20px rgba(4,120,87,0.38), inset 0 1px 0 rgba(255,255,255,0.15) !important;
   transform: translateY(-1px) !important;

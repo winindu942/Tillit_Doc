@@ -48,14 +48,13 @@ const config = {
   themeConfig: ({
     colorMode: { defaultMode: 'light', disableSwitch: false, respectPrefersColorScheme: false },
     navbar: {
-      title: 'TILLIT AI · Docs',
       logo: { alt: 'TILLIT AI Logo', src: 'img/TillitLogo.png', href: 'https://tillit.world' },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Documentation',
+          label: 'In Progress',
         },
         {
           to: '/',

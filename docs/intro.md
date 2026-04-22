@@ -7,12 +7,13 @@ hide_title: true
 ---
 
 import { ShieldCheckIcon, Square3Stack3DIcon, BoltIcon, Cog6ToothIcon, CreditCardIcon } from '@heroicons/react/24/outline';
+import Link from '@docusaurus/Link';
 import PageFeedback from '@site/src/components/PageFeedback';
 
 <div className="hero-section">
   <h1>TilliT AI Documentation</h1>
   <p>Verify badge claims, map your supply chain, and build trust with your customers — directly from your Shopify admin.</p>
-  <a className="hero-btn" href="/advanced">Get Started →</a>
+  <Link className="hero-btn" to="/advanced">Get Started →</Link>
 </div>
 
 ## App Sections
