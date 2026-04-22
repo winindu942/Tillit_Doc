@@ -46,21 +46,16 @@ const config = {
   ],
 
   themeConfig: ({
-    colorMode: { defaultMode: 'dark', disableSwitch: true, respectPrefersColorScheme: false },
+    colorMode: { defaultMode: 'light', disableSwitch: false, respectPrefersColorScheme: false },
     navbar: {
-      title: 'TILLIT AI',
-      logo: { alt: 'TILLIT AI Logo', src: 'img/TillitLogo.png' },
+      title: 'TILLIT AI · Docs',
+      logo: { alt: 'TILLIT AI Logo', src: 'img/TillitLogo.png', href: 'https://tillit.world' },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Documentation',
-        },
-        {
-          href: 'https://tillit.world',
-          label: 'tillit.world ↗',
-          position: 'right',
         },
         {
           to: '/',
