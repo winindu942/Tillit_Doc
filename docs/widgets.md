@@ -16,7 +16,7 @@ Navigate to **Widgets** in the left sidebar of the TilliT AI app.
 
 ## Overview
 
-![Dashboard Overview](./img/widgets/dashboard-overview.png)
+![Dashboard Overview](/img/widgets/dashboard-overview.png)
 
 The **Widget Management** dashboard gives you full control over:
 
@@ -39,7 +39,7 @@ The Widgets page has two tabs:
 
 Before any badge appears on your storefront, you must approve it. You control how this works:
 
-![Badge Management](./img/widgets/badge-management.png)
+![Badge Management](/img/widgets/badge-management.png)
 
 | Mode                 | Description                                                              |
 | -------------------- | ------------------------------------------------------------------------ |
@@ -56,7 +56,7 @@ Nothing appears on your storefront until a badge is approved — regardless of w
 
 Theme Widgets are the visual components customers see on your store. Add them via the Shopify Theme Editor.
 
-![Theme Widgets](./img/widgets/theme-widgets.png)
+![Theme Widgets](/img/widgets/theme-widgets.png)
 
 Click **Open Theme Editor** to manage widget placement.
 
@@ -82,7 +82,7 @@ Click **Open Theme Editor** to manage widget placement.
 
 Below the Theme Widgets section, each product in your catalog is listed with its badge status.
 
-![Product Card](./img/widgets/product-card.png)
+![Product Card](/img/widgets/product-card.png)
 
 For each product you can see:
 
@@ -114,7 +114,7 @@ Each badge shows:
 
 ## Dashboard Metrics
 
-![Metrics](./img/widgets/metrics.png)
+![Metrics](/img/widgets/metrics.png)
 
 A quick summary of certification activity across your store:
 
@@ -128,7 +128,7 @@ A quick summary of certification activity across your store:
 
 ## Badge Approval Workflow
 
-![Workflow](./img/widgets/workflow.png)
+![Workflow](/img/widgets/workflow.png)
 
 Badges go through multiple stages before becoming visible to customers:
 
@@ -172,7 +172,7 @@ This ensures full transparency from sourcing to storefront.
 
 ## Search & Filters
 
-![Search & Filters](./img/widgets/search-filter.png)
+![Search & Filters](/img/widgets/search-filter.png)
 
 Use search and filtering to quickly locate products in the badge list:
 
@@ -187,7 +187,7 @@ Use search and filtering to quickly locate products in the badge list:
 
 The **Badge Verifications** tab shows a complete record of all badge verification activity across your products. It provides deeper insight into verification confidence, approval status, and batch-level certification details.
 
-![Badge Verifications Overview](./img/widgets/badge-verifications-overview.png)
+![Badge Verifications Overview](/img/widgets/badge-verifications-overview.png)
 
 ---
 
@@ -207,7 +207,7 @@ This helps you quickly monitor the overall verification pipeline.
 
 ### Confidence Threshold
 
-![Confidence Threshold](./img/widgets/confidence-threshold.png)
+![Confidence Threshold](/img/widgets/confidence-threshold.png)
 
 The **Confidence Threshold** controls which badges are eligible for customer-facing benefit generation.
 
@@ -240,7 +240,7 @@ Adjust this value to balance between badge coverage and verification accuracy.
 
 ### Benefits Generation
 
-![Benefits Generation](./img/widgets/benefits-generation.png)
+![Benefits Generation](/img/widgets/benefits-generation.png)
 
 You can trigger AI-powered benefit generation for all badges that meet the current confidence threshold.
 
@@ -254,7 +254,7 @@ This feature:
 
 ### Review & Approve Badges
 
-![Badge Table](./img/widgets/badge-table.png)
+![Badge Table](/img/widgets/badge-table.png)
 
 This table lists all verified badges across your products and allows you to manage their status.
 
@@ -288,7 +288,7 @@ Only **Live** badges are visible to customers.
 
 ### Approval Workflow
 
-![Approval Workflow](./img/widgets/approval-workflow.png)
+![Approval Workflow](/img/widgets/approval-workflow.png)
 
 Badges follow a structured lifecycle:
 
@@ -315,7 +315,7 @@ This enables:
 
 ### Search & Filtering
 
-![Verification Search](./img/widgets/verification-search.png)
+![Verification Search](/img/widgets/verification-search.png)
 
 Use search and filters to quickly find specific badges:
 
@@ -328,7 +328,7 @@ Use search and filters to quickly find specific badges:
 
 ### Example: Multi-Batch Certification
 
-![Example Pumpkin](./img/widgets/example-pumpkin.png)
+![Example Pumpkin](/img/widgets/example-pumpkin.png)
 
 Example: A product may have multiple batches with different certification outcomes:
 
