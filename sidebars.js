@@ -15,6 +15,7 @@ const sidebars = {
       label: 'App Sections',
       collapsible: false,
       items: [
+        'dashboard',
         'advanced',
         'trust-center',
         'widgets',

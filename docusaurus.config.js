@@ -76,6 +76,7 @@ const config = {
           title: 'Documentation',
           items: [
             { label: 'Introduction',    to: '/' },
+            { label: 'Dashboard',       to: '/dashboard' },
             { label: 'Advanced',        to: '/advanced' },
             { label: 'Trust Center',    to: '/trust-center' },
             { label: 'Widgets',         to: '/widgets' },

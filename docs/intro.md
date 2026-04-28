@@ -6,7 +6,7 @@ slug: /
 hide_title: true
 ---
 
-import { ShieldCheckIcon, Square3Stack3DIcon, BoltIcon, Cog6ToothIcon, CreditCardIcon } from '@heroicons/react/24/outline';
+import { ShieldCheckIcon, Square3Stack3DIcon, BoltIcon, Cog6ToothIcon, CreditCardIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 import Link from '@docusaurus/Link';
 import PageFeedback from '@site/src/components/PageFeedback';
 
@@ -59,6 +59,11 @@ import PageFeedback from '@site/src/components/PageFeedback';
 ## App Sections
 
 <div className="card-grid">
+  <Link to="/dashboard" className="card">
+    <div className="card-icon card-icon--green"><ChartBarIcon className="icon" /></div>
+    <h4>Dashboard</h4>
+    <p>View real-time KPIs, badge verification scores, anomaly alerts, and supply chain health.</p>
+  </Link>
   <Link to="/trust-center" className="card">
     <div className="card-icon card-icon--blue"><ShieldCheckIcon className="icon" /></div>
     <h4>Trust Center</h4>
