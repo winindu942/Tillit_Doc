@@ -1,7 +1,7 @@
 ---
 id: settings
 title: Settings
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 import PageFeedback from '@site/src/components/PageFeedback';

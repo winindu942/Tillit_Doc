@@ -1,7 +1,7 @@
 ---
 id: advanced
 title: Advanced
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 import PageFeedback from '@site/src/components/PageFeedback';
@@ -147,10 +147,21 @@ Products that have been set up with TilliT show four action buttons:
 |---|---|
 | **Re-map Supply Chain** | Re-runs supply chain mapping for this product |
 | **Run Data Entry** | Re-runs the data entry step for this product |
-| **Badge Verification** | Runs badge verification for this product |
+| **Badge Verification** | Opens the badge verification flow for this product |
 | **Advanced** | Opens advanced settings for this specific product |
 
-You will also see the number of configurations (e.g. *"2 configurations"*) and any category tags (e.g. Vegetable, Fruit).
+:::info
+**Run Data Entry** includes auto-fill options — **Auto-Fill Configuration** and **Auto-Fill All** — which automatically populate traceability data fields using your Shopify product data.
+:::
+
+:::info
+**Badge Verification** opens a step-by-step flow: select which badge to verify → select a region → click **Create Case**. The system then processes the verification and returns a result (Verified, Pending, or Failed).
+:::
+
+Below the product name you will also see:
+- **Shop name** — the Shopify store this product belongs to (e.g. *"tillit-test-shop3"*), shown in small grey text
+- **Category tags** — colored pill badges showing the product's categories (e.g. FreshFarm, Vegetable, Fruit)
+- **Configuration count** — e.g. *"2 configurations"* showing how many supply chain configurations exist for this product
 
 ### Unconfigured products
 

@@ -15,6 +15,11 @@ const config = {
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownImages: 'ignore',
+    },
+  },
 
   i18n: { defaultLocale: 'en', locales: ['en'] },
 

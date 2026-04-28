@@ -1,7 +1,7 @@
 ---
 id: widgets
 title: Widgets
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 import PageFeedback from '@site/src/components/PageFeedback';
@@ -12,340 +12,275 @@ import PageFeedback from '@site/src/components/PageFeedback';
 
 Navigate to **Widgets** in the left sidebar of the TilliT AI app.
 
----
+The page has two tabs at the top:
 
-## Overview
-
-![Dashboard Overview](/img/widgets/dashboard-overview.png)
-
-The **Widget Management** dashboard gives you full control over:
-
-- Badge approvals
-- Storefront visibility
-- Product-level certification tracking
-
-The Widgets page has two tabs:
-
-| Tab                     | What it does                                                                 |
-| ----------------------- | ---------------------------------------------------------------------------- |
-| **Badge Management**    | Approve badges, configure theme widgets, manage per-product badge visibility |
-| **Badge Verifications** | View detailed verification records for each badge                            |
+| Tab | What it does |
+|---|---|
+| **Badge Management** | Approve badges, configure theme widgets, manage per-product badge visibility |
+| **Badge Verifications** | View all verified badges in a flat table, set confidence threshold, run benefit generation |
 
 ---
 
 ## Badge Management
 
+### Awaiting Approval banner
+
+![Yellow alert banner — showing number of badges awaiting approval](/img/widgets/alert-banner.png)
+
+When there are badges waiting for your approval, a yellow/amber banner appears at the very top of the Badge Management tab. It shows the number of badges pending and a reminder:
+
+> *Review and approve badges on each product below. Nothing appears on your storefront until you approve.*
+
+This banner only appears when at least one badge needs your action. It disappears when all badges are approved or rejected.
+
+---
+
 ### Approval Mode
 
-Before any badge appears on your storefront, you must approve it. You control how this works:
+![Approval Mode section — showing Require Approval and Auto-Approve toggle buttons with orange warning text](/img/widgets/approval-mode.png)
 
-![Badge Management](/img/widgets/badge-management.png)
+The **Manual Approval** section controls how badges are published to your store.
 
-| Mode                 | Description                                                              |
-| -------------------- | ------------------------------------------------------------------------ |
-| **Require Approval** | You manually review and approve each badge before it goes live           |
-| **Auto-Approve**     | Badges are automatically published once verified — no manual step needed |
+**Mode toggle** — two buttons side by side:
+
+- **Require Approval** — amber/orange filled button when selected. You manually review and approve each badge before it goes live on your storefront.
+- **Auto-Approve** — white outlined button when not selected. Badges are automatically published once verified — no manual step needed.
+
+When **Require Approval** is active, an orange warning line appears below the toggle:
+
+> *Approve each badge below before it goes live. Nothing appears on your storefront until you approve.*
 
 :::warning
-Nothing appears on your storefront until a badge is approved — regardless of which mode you choose.
+Regardless of which mode is selected, no badge is visible to customers until it has been approved — either by you manually or automatically.
 :::
 
 ---
 
 ### Theme Widgets
 
-Theme Widgets are the visual components customers see on your store. Add them via the Shopify Theme Editor.
+Theme Widgets are the visual components that appear on your Shopify storefront. There are two widgets available.
 
-![Theme Widgets](/img/widgets/theme-widgets.png)
+![Theme Widgets section — Setup Progress bar and two widget cards](/img/widgets/theme-widgets-new.png)
 
-Click **Open Theme Editor** to manage widget placement.
+**Open Theme Editor** button — dark button in the top right. Clicking this opens the Shopify Theme Editor where you can position and configure the widgets on your store pages.
 
-**Setup Progress** shows how many widgets are active (e.g. 1 / 2 active).
+**Setup Progress bar** — a horizontal progress bar showing how many of the two widgets are currently active (e.g. **1 / 2 active**).
 
 #### Product Certifications Widget
 
-- **Status:** Active
 - **Theme Editor section:** Product Certifications
-- Displays your verified certification badges directly on product pages
-- Customers can tap any badge to view the full verification proof and AI-generated benefits
+- **Status badge:** <span className="badge badge--green">Active</span> — widget is installed and showing on your product pages
+- **What it does:** Displays your verified certification badges directly on product pages. Customers can tap any badge to view the full verification proof and AI-generated benefits.
+- **Confirmation text:** *"✓ Visible on your store"* in green — confirms the widget is live
 
 #### TilliT Trust Banner
 
-- **Status:** Not Added by default
 - **Theme Editor section:** TilliT Banner (Footer)
-- A sitewide trust bar that shows the TilliT verification mark across all pages
-- Helps build customer confidence before they even reach a product page
+- **Status badge:** <span className="badge badge--grey">Not Added</span> — widget has not been installed yet
+- **What it does:** A sitewide trust bar showing the TilliT verification mark across all pages. Builds customer confidence before they reach the product page.
+- **"+ Add to theme" button** — outlined button. Click this to install the banner into your Shopify theme.
+
+---
+
+### Dashboard Metrics
+
+![Dashboard metrics — three cards showing Products Tracked, Showing Badges, and Badges to Review](/img/widgets/metrics-new.png)
+
+Three metric cards appear below the Theme Widgets section, each with a colored dot indicator:
+
+| Dot | Metric | Description |
+|---|---|---|
+| Blue dot | **Products Tracked** | Total products with at least one verified certification batch |
+| Green dot | **Showing Badges** | Products with at least one approved badge currently visible to customers |
+| Amber dot | **Badges to Review** | Verified badges waiting for your approval before they go live |
 
 ---
 
 ### Product Badge List
 
-Below the Theme Widgets section, each product in your catalog is listed with its badge status.
+Below the metrics, each product in your catalog appears as a card showing its badge status and supply chain details. Cards are listed one per row.
 
-![Product Card](/img/widgets/product-card.png)
+#### Product card header
 
-For each product you can see:
+![Product card header — product image, name, supply chain count, batch count, and status badge](/img/widgets/product-card-header.png)
 
-- Product name and supplier
-- Number of supply chains and batches
-- Active badge(s) with verification status
+Each card starts with a header row containing:
 
-Each badge shows:
+- **Product image thumbnail** on the left
+- **Product name** in bold (e.g. *Tropical Pineapple*)
+- **Supply chain info** in smaller grey text immediately after the name (e.g. *FreshFarm1 supply chain · 1 batch*)
+- **Status badge** on the far right — a pill badge showing the overall approval state for that product:
+  - <span className="badge badge--amber">X to Approve</span> — number of badges waiting for your approval
+  - <span className="badge badge--green">X Live</span> — number of approved badges currently live on the store
 
-| Status                                                       | Meaning                                          |
-| ------------------------------------------------------------ | ------------------------------------------------ |
-| <span className="badge badge--green">Live on Store</span>    | Badge is approved and visible to customers       |
-| <span className="badge badge--amber">Ready to Approve</span> | Badge has been verified — awaiting your approval |
-| <span className="badge badge--blue">Verified · X%</span>     | Verification confidence score                    |
+#### Per-product approval alert
 
-**Available actions per badge:**
+![Per-product orange alert banner with Approve All button](/img/widgets/product-card-alert.png)
 
-- **View Details** — see the full verification proof
-- **Revoke** — remove the badge from your storefront immediately
-- **Preview** — preview how the badge looks on the product page
-- **Set as Active** — activate a specific supply chain batch for display
+When a product has badges ready to approve, an orange alert bar appears inside the card:
 
-**Per-product buttons:**
+> *X badge(s) ready to publish. Approve to make them visible on your product page.*
 
-- **View Product Page** — open the live product page on your store
-- **Edit in Theme Editor** — jump directly to the widget placement for that product
+On the right of this bar is an **Approve All** dark button. Clicking this approves all pending badges for that product in one action.
 
----
+#### Supply chain and batch rows
 
-## Dashboard Metrics
+![Supply chain name, batch row with location and status, badge row with verification score and approval actions, card footer links](/img/widgets/product-card-batches.png)
 
-![Metrics](/img/widgets/metrics.png)
+Inside each card, the supply chains and batches are listed:
 
-A quick summary of certification activity across your store:
+- **Supply chain name** (e.g. *Tropical Pineapple Farm Sourcing*) in bold, with the number of batches below it
+- **Batch rows** — each batch shows:
+  - Location path (e.g. *Pack · Shop location*)
+  - <span className="badge badge--blue">Active</span> badge if the batch is currently active
+  - A small live/pending count badge (e.g. *1 live*, *1 pending*)
+  - **Quantity** — number of units in that batch
+  - **Preview** and **Set as Active** links on the right — Preview shows how the badge looks on the storefront, Set as Active makes this the displayed batch
 
-| Metric               | Description                                                     |
-| -------------------- | --------------------------------------------------------------- |
-| **Products tracked** | Total products with at least one certification                  |
-| **Showing badges**   | Products currently displaying approved badges on the storefront |
-| **Badges to review** | Certifications pending your approval                            |
+#### Badge rows
 
----
+![Badge row showing certification logo, name, verification score, status, and action buttons](/img/widgets/product-card-badge-row.png)
 
-## Badge Approval Workflow
+Below the batch rows, each verified badge for that batch is listed:
 
-![Workflow](/img/widgets/workflow.png)
+- **Certification logo** — small circular icon on the left
+- **Certification name** (e.g. *USDA Organic*, *Non-GMO Project Verified*)
+- **Verification score** — e.g. *Verified · 49%*
+- **Status badge:**
+  - <span className="badge badge--amber">Ready to Approve</span> — verified, awaiting your approval
+  - <span className="badge badge--green">Live on Store</span> — approved and visible to customers
 
-Badges go through multiple stages before becoming visible to customers:
+**Action buttons** on the right vary by status:
 
-| Status                                                       | Meaning                                            |
-| ------------------------------------------------------------ | -------------------------------------------------- |
-| <span className="badge badge--blue">Verified</span>          | Badge authenticity has been confirmed by TilliT AI |
-| <span className="badge badge--amber">Ready to Approve</span> | Verified and awaiting your approval                |
-| <span className="badge badge--green">Live on Store</span>    | Approved and visible to customers                  |
-| <span className="badge badge--red">Rejected</span>           | Badge failed validation                            |
+| Badge status | Available actions |
+|---|---|
+| Ready to Approve | **View Details**, **Approve** (dark button), **Reject** |
+| Live on Store | **View Details**, **Revoke** |
 
-:::info
-Only approved badges are visible on your storefront.
-:::
+- **View Details** — opens the full verification proof for this badge
+- **Approve** — publishes the badge to your storefront
+- **Reject** — removes the badge from eligibility
+- **Revoke** — removes a live badge from your storefront immediately
 
----
+#### Card footer links
 
-## Certification Examples
+At the bottom of each product card are two text links:
 
-Common certification badges supported by TilliT AI:
-
-- **USDA Organic** — verifies compliance with USDA or international organic standards
-- **Non-GMO Project Verified** — confirms ingredients are not genetically modified
-- **Certified Gluten-Free** — proof of gluten levels below 20ppm
-- **Fair Trade International** — validates ethical sourcing and fair labour practices
-
-These certifications indicate compliance with recognised quality and sourcing standards.
+- **View Product Page** — opens the live product page on your Shopify store in a new tab
+- **Edit in Theme Editor** — jumps directly to the widget placement for that product in the Shopify Theme Editor
 
 ---
 
-## Supply Chain & Batch Details
+### Search & Filters
 
-Each product card includes traceable supply chain data:
+![Search bar and Add filter button in Badge Management](/img/widgets/search-filter-new.png)
 
-- **Origin location** — e.g. Sri Lanka, Canada
-- **Batch quantity** — number of units per batch
-- **Certification per batch** — which badges apply to each batch
+Above the product card list:
 
-This ensures full transparency from sourcing to storefront.
-
----
-
-## Search & Filters
-
-![Search & Filters](/img/widgets/search-filter.png)
-
-Use search and filtering to quickly locate products in the badge list:
-
-1. Search by **product name**
-2. Apply filters based on:
-   - Badge status
-   - Certification type
+- **Search bar** — search by product name to find a specific product
+- **Add filter +** — click to apply additional filters (by badge status, certification type, etc.)
 
 ---
 
 ## Badge Verifications
 
-The **Badge Verifications** tab shows a complete record of all badge verification activity across your products. It provides deeper insight into verification confidence, approval status, and batch-level certification details.
+The **Badge Verifications** tab shows all verified badges across all products in a flat table. This is where you manage the confidence threshold, run benefit generation, and do bulk badge approvals.
 
-![Badge Verifications Overview](/img/widgets/badge-verifications-overview.png)
+### Verification metrics
 
----
+![Badge Verifications tab — three metric cards at the top](/img/widgets/badge-verifications-metrics.png)
 
-### Verification Summary
+Three metric cards appear at the top of the tab:
 
-At the top of the page, you can see a quick summary of all badge activity:
-
-| Metric                | Description                                            |
-| --------------------- | ------------------------------------------------------ |
-| **Verified badges**   | Total badges that passed automated verification checks |
-| **Awaiting approval** | Badges ready to publish but require your approval      |
-| **Live on store**     | Badges currently visible to customers                  |
-
-This helps you quickly monitor the overall verification pipeline.
+| Dot | Metric | Description |
+|---|---|---|
+| Blue dot | **Verified Badges** | Badges that passed the automated certification check |
+| Amber dot | **Awaiting Approval** | Ready to publish — just needs your sign-off before going live |
+| Green dot | **Live on Store** | Approved badges currently visible to customers on your product pages |
 
 ---
 
 ### Confidence Threshold
 
-![Confidence Threshold](/img/widgets/confidence-threshold.png)
+![Confidence Threshold slider at 40% with Saved badge and Generate Benefits button](/img/widgets/confidence-threshold.png)
 
-The **Confidence Threshold** controls which badges are eligible for customer-facing benefit generation.
+The **Confidence Threshold** controls which badges are eligible for AI-generated benefit text shown to customers.
 
-- Current threshold defines the **minimum verification score**
-- Only badges meeting this threshold will generate AI-based benefit descriptions
+- A horizontal slider runs from **10% (permissive)** on the left to **100% (strict)** on the right
+- The current value is shown in a red/orange box on the right (e.g. **40% THRESHOLD**)
+- A <span className="badge badge--green">Saved</span> green badge appears when the threshold has been saved
+- Helper text below the slider: *"Low confidence — more badges but less certainty"*
 
-#### Behavior:
+**How it works:**
 
-- **Below threshold**
-
-  - Badge is stored in the system
-  - Not published to customers
-
-- **Above threshold**
-  - Eligible for storefront display
-  - Can include AI-generated benefits
-
-#### Scale:
-
-| Level                | Effect                                  |
-| -------------------- | --------------------------------------- |
-| **10% (Permissive)** | More badges included, lower certainty   |
-| **100% (Strict)**    | Fewer badges included, higher certainty |
+| Badge confidence | Result |
+|---|---|
+| **At or above threshold** | Eligible for AI-generated benefit text and storefront display |
+| **Below threshold** | Badge is stored but benefit text is not generated and badge is not published |
 
 :::info
-Adjust this value to balance between badge coverage and verification accuracy.
+Lowering the threshold (towards 10%) means more badges qualify but with less certainty. Raising it (towards 100%) means only high-confidence badges qualify.
 :::
 
 ---
 
 ### Benefits Generation
 
-![Benefits Generation](/img/widgets/benefits-generation.png)
+A line below the threshold reads:
 
-You can trigger AI-powered benefit generation for all badges that meet the current confidence threshold.
+> *Run benefits generation for all badges meeting the current threshold.*
 
-This feature:
-
-- Explains the value of certifications to customers
-- Improves trust and clarity on product pages
-- Runs only on eligible badges
+**Generate Benefits** button — outlined button on the right. Clicking this triggers AI benefit text generation for all badges that currently meet the confidence threshold. Benefit text is what customers see when they tap a badge on the product page.
 
 ---
 
 ### Review & Approve Badges
 
-![Badge Table](/img/widgets/badge-table.png)
+![Review & Approve Badges section — table header with Approve All Pending and Remove All Live buttons](/img/widgets/badge-table-header.png)
 
-This table lists all verified badges across your products and allows you to manage their status.
+This section shows all verified badges across all products in a flat table.
 
-#### Table Columns
+**Section heading:** *Review & Approve Badges* with subtitle *"Approve badges to publish them to your product pages."*
 
-| Column          | Description                                    |
-| --------------- | ---------------------------------------------- |
-| **Certificate** | Name of the certification (e.g., USDA Organic) |
-| **Product**     | Associated product                             |
-| **Batch**       | Specific product batch                         |
-| **Confidence**  | Verification score                             |
-| **Actions**     | Approval or rejection controls                 |
+**Search bar** — search by product or badge name to find specific badges (placeholder: *"Search by product, badge..."*).
 
----
+**Badge count** — shows the total number of badges in the table (e.g. *11 badges*).
 
-### Badge Status Types
+**Bulk action buttons** (top right of the table):
+- **Approve All Pending** — dark button. Approves every badge currently in Pending status across all products in one click.
+- **Remove All Live** — outlined button. Revokes all currently live badges from the storefront in one click.
 
-Each badge has a status that determines its visibility:
+#### Table structure
 
-| Status                                              | Meaning                                 |
-| --------------------------------------------------- | --------------------------------------- |
-| <span className="badge badge--green">Live</span>    | Approved and visible on your storefront |
-| <span className="badge badge--amber">Pending</span> | Awaiting manual approval                |
-| <span className="badge badge--red">Rejected</span>  | Failed validation or manually rejected  |
+![Badge table rows — showing Live, Pending, and Rejected status examples](/img/widgets/badge-table-rows.png)
 
-:::warning
-Only **Live** badges are visible to customers.
-:::
+The table has a checkbox column on the left (for selecting individual rows) and five columns:
 
----
+| Column | What it shows |
+|---|---|
+| **Certificate** | Certification logo + name + status badge stacked |
+| **Product** | The product this badge belongs to |
+| **Batch** | The specific batch (e.g. *250g / Sri Lanka · Shop location*) |
+| **Confidence** | Verification score as a percentage (e.g. *49%*) |
+| **Actions** | Buttons to approve, reject, or revoke |
 
-### Approval Workflow
+#### Status badges in the table
 
-![Approval Workflow](/img/widgets/approval-workflow.png)
+| Badge | Colour | Meaning |
+|---|---|---|
+| <span className="badge badge--green">Live</span> | Green | Approved and visible on your storefront |
+| <span className="badge badge--amber">Pending</span> | Amber | Awaiting your approval |
+| <span className="badge badge--red">Rejected</span> | Red/pink | Failed validation or manually rejected |
 
-Badges follow a structured lifecycle:
+#### Row-level actions
 
-1. **Verified** — badge passes automated checks
-2. **Pending** — waiting for admin approval
-3. **Approved (Live)** — visible on storefront
-4. **Rejected** — removed from eligibility
+Actions shown per row depend on the badge status:
 
-This ensures full administrative control over what appears on your store.
-
----
-
-### Batch-Level Verification
-
-Badges are applied at the **batch level**, not just the product level.
-
-This enables:
-
-- Region-specific verification (e.g., Sri Lanka, Canada)
-- Accurate certification tracking per batch
-- Full supply chain transparency
-
----
-
-### Search & Filtering
-
-![Verification Search](/img/widgets/verification-search.png)
-
-Use search and filters to quickly find specific badges:
-
-- Search by **product name** or **certificate**
-- Filter by:
-  - Status (Live, Pending, Rejected)
-  - Certification type
-
----
-
-### Example: Multi-Batch Certification
-
-![Example Pumpkin](/img/widgets/example-pumpkin.png)
-
-Example: A product may have multiple batches with different certification outcomes:
-
-- Same certification across multiple regions
-- Some batches **approved**, others **rejected**
-- Different confidence scores per batch
-
-This reflects real-world supply chain variation and ensures accurate certification visibility.
-
----
-
-### Key Notes
-
-- Badges must be approved before appearing on the storefront
-- Confidence threshold affects benefit generation, not raw verification storage
-- Verification is performed per batch, not just per product
-- Only approved badges are visible to customers
+| Badge status | Actions shown |
+|---|---|
+| **Live** | **Revoke** (outlined red button) |
+| **Pending** | **Approve** (dark button) + **Reject** (outlined button) |
+| **Rejected** | **Approve** (dark button) |
 
 ---
 

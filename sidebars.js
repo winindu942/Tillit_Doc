@@ -6,6 +6,11 @@ const sidebars = {
       label: 'Introduction',
     },
     {
+      type: 'doc',
+      id: 'setup',
+      label: 'Setup & Installation',
+    },
+    {
       type: 'category',
       label: 'App Sections',
       collapsible: false,
