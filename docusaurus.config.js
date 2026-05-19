@@ -7,8 +7,8 @@ const config = {
 
   future: { v4: true },
 
-  url: 'https://winindu942.github.io',
-  baseUrl: '/Tillit_Doc/',
+  url: 'https://tillit.world',
+  baseUrl: '/docs/',
 
   organizationName: 'winindu942',
   projectName: 'Tillit_Doc',
